@@ -43,16 +43,39 @@
 \texttt{zz}			\> cur. line to top\\
 \texttt{zt}			\> cur. line to middle\\
 \texttt{zb}			\> cur. line to bottom\\
-\texttt{CTRL+y, CTRL+e}		\> sroll one line\\
-\texttt{CTRL+u, CTRL+d}		\> sroll half-page\\
+\texttt{CTRL+y, CTRL+e}		\> scroll one line\\
+\texttt{CTRL+u, CTRL+d}		\> scroll half-page\\
 \texttt{CTRL+b, CTRL+f}		\> scroll full-page\\\\
 
 \large{\textsc{inline navigation:}}\\
 \texttt{0}					\> start of line\\
 \texttt{\$}					\> end of line \\
-\texttt{\^}					\> first cahracter\\
-\texttt{CTRL+b, CTRL+f}		\> scroll full-page\\
+\texttt{\^}					\> first character\\
+\texttt{CTRL+b, CTRL+f}		\> scroll full-page\\\\
+
+\large{\textsc{split screen:}}\\
+\texttt{CTRL+W+V}	\> split vertical\\
+\texttt{CTRL+W+S}	\> split horizontal\\
+\texttt{CTRL+W+W}	\> change screen\\
 \end{tabbing}
+
+\begin{tabbing}
+\large{creating tabs}\\
+\texttt{vim -p FILE\_0 FILE\_1 FILE\_2}	\hspace{0.5 cm}\= opens FILES in separate tabs\\
+\texttt{:tabedit FILE}					\> open FILE in new tab\\
+\texttt{:tabfind FILE}					\> searches for FILE in PATH\\
+\texttt{:tabclose}						\> closes current tab\\
+\texttt{:tabclose N}					\> closes tab number  N\\\\
+
+\large{working with tabs}\\
+\texttt{:tabs}			\> list all tabs\\
+\texttt{:tabm N}		\> move tab to pos N (0 = first)\\
+\texttt{:tabm}			\> move current tab to last\\
+\texttt{gt}				\> go to next tab\\
+\texttt{gT}				\> go to previous tab\\
+\texttt{NUM gt}			\> got to tab NUM\\
+\end{tabbing}
+
 
 
 
