@@ -1,6 +1,8 @@
 \documentclass[a4paper,10pt]{scrartcl}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
+\usepackage{multicol}
+\usepackage{blindtext}
 
 \geometry{inner=1cm,outer=1cm,top=1cm,bottom=1cm}
 
@@ -18,56 +20,90 @@
 }
 
 \begin{document}
-\centering\textsc{\huge{yet another vim cheat sheet}}
-\vspace{1cm}
+\centering\textsc{\huge{yet another vim cheat sheet}}\\
+\vspace{0.5cm}
+\large{\centering you need to combine: \texttt{verb + noun}: \textbf{d}elete + \textbf{w}ord}
 
-
+\begin{multicols}{2}
 \begin{tabbing}
-\large{\textsc{curser navigation:}}\\
+\large{\textsc{curser navigation:}}\\\\
 \texttt{j,k}		\hspace{2.5 cm}\= moving up and down\\
 \texttt{g,G}		\> first line, last line\\
-\texttt{NUM gg}		\> Jump to line NUM\\
+\texttt{NUM + gg}		\> Jump to line NUM\\
 \texttt{\}}			\> fwd to next blank line\\
 \texttt{\{}			\> bwd to next blank line\\
 \texttt{H}	\> to top of screen\\
 \texttt{M}	\> to middle of screen\\
 \texttt{L}	\> to bottom of screen\\\\
 
-\large{\textsc{curser search:}}\\
-\texttt{f CHAR} 	\> fwd at CHAR on cur line\\
-\texttt{F CHAR} 	\> bwd at CHAR on cur line\\
-\texttt{t CHAR} 	\> fwd to CHAR on cur line\\
-\texttt{T CHAR} 	\> bwd to CHAR on cur line\\\\
+\large{\textsc{curser search:}}\\\\
+\texttt{f + CHAR} 	\> fwd at CHAR on cur line\\
+\texttt{F + CHAR} 	\> bwd at CHAR on cur line\\
+\texttt{t + CHAR} 	\> fwd to CHAR on cur line\\
+\texttt{T + CHAR} 	\> bwd to CHAR on cur line\\
+\texttt{;} 	\> next match in line\\
+\texttt{,} 	\> backward matching\\\\
 
-\large{\textsc{screen shifting:}}\\
-\texttt{zz}			\> cur. line to top\\
-\texttt{zt}			\> cur. line to middle\\
-\texttt{zb}			\> cur. line to bottom\\
+\large{\textsc{screen shifting:}}\\\\
+\texttt{zz}			\> current line to top\\
+\texttt{zt}			\> current line to middle\\
+\texttt{zb}			\> current line to bottom\\
 \texttt{CTRL+y, CTRL+e}		\> scroll one line\\
 \texttt{CTRL+u, CTRL+d}		\> scroll half-page\\
 \texttt{CTRL+b, CTRL+f}		\> scroll full-page\\\\
 
-\large{\textsc{inline navigation:}}\\
+\large{\textsc{inline navigation:}}\\\\
 \texttt{0}					\> start of line\\
 \texttt{\$}					\> end of line \\
 \texttt{\^}					\> first character\\
 \texttt{CTRL+b, CTRL+f}		\> scroll full-page\\\\
 
-\large{\textsc{split screen:}}\\
+\large{\textsc{split screen:}}\\\\
 \texttt{CTRL+W+V}	\> split vertical\\
 \texttt{CTRL+W+S}	\> split horizontal\\
 \texttt{CTRL+W+W}	\> change screen\\
 \end{tabbing}
 
 \begin{tabbing}
-\large{creating tabs}\\
+\large{\textsc{editing}}\\\\
+\texttt{i}				\hspace{2cm}\= insert mode\\
+\texttt{I}				\> insert at first char in line\\
+\texttt{o}				\> insert mode next line\\
+\texttt{O}				\> insert mode above line\\
+\texttt{d + NOUN}		\> delete\\
+\texttt{c}				\> delete and insert mode \\
+\texttt{x}				\> delete char\\
+\texttt{r}				\> change marked text\\
+\texttt{R}				\> change from cursor position\\
+\texttt{\textbf{.}}		\> \textbf{repeat last change}\\
+\texttt{u}				\> undo changes\\
+\texttt{>}				\> indent\\
+\texttt{<}				\> dedent/unindent/outdent\\
+\texttt{y + NOUN}		\> yank: copy\\
+\texttt{yy}				\> copy line\\
+\texttt{p}				\> paste after cursor\\
+\texttt{P}				\> paste before cursor\\
+\texttt{VERB + iw}		\> inner word: (\textbf{cim})\\
+\texttt{VERB + it}		\> inner tag: ex.: (\textbf{cip})\\
+\texttt{VERB + i\"}		\> inner quote ex.: (\textbf{ci\"})\\
+
+
+
+\end{tabbing}
+
+
+\end{multicols}
+
+
+\begin{tabbing}
+\large{\textsc{creating tabs}}\\
 \texttt{vim -p FILE\_0 FILE\_1 FILE\_2}	\hspace{0.5 cm}\= opens FILES in separate tabs\\
 \texttt{:tabedit FILE}					\> open FILE in new tab\\
 \texttt{:tabfind FILE}					\> searches for FILE in PATH\\
 \texttt{:tabclose}						\> closes current tab\\
 \texttt{:tabclose N}					\> closes tab number  N\\\\
 
-\large{working with tabs}\\
+\large{\textsc{working with tabs}}\\
 \texttt{:tabs}			\> list all tabs\\
 \texttt{:tabm N}		\> move tab to pos N (0 = first)\\
 \texttt{:tabm}			\> move current tab to last\\
@@ -76,9 +112,7 @@
 \texttt{NUM gt}			\> got to tab NUM\\
 \end{tabbing}
 
-
-
-
-
+\vspace{1cm}
+\centering\textsc{version 0.1 - Martin Steinbach - meet-unix.org}
 
 \end{document}
