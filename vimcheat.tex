@@ -2,7 +2,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{multicol}
-\usepackage{blindtext}
 
 \geometry{inner=1cm,outer=1cm,top=1cm,bottom=1cm}
 
@@ -59,9 +58,10 @@
 \texttt{CTRL+b, CTRL+f}		\> scroll full-page\\\\
 
 \large{\textsc{split screen:}}\\\\
-\texttt{CTRL+W+V}	\> split vertical\\
-\texttt{CTRL+W+S}	\> split horizontal\\
-\texttt{CTRL+W+W}	\> change screen\\
+\texttt{CTRL+w+v}	\> split vertical\\
+\texttt{CTRL+w+s}	\> split horizontal\\
+\texttt{CTRL+w+w}	\> change screen\\
+\texttt{CTRL+w+q}	\> quit screen\\
 \end{tabbing}
 
 \begin{tabbing}
@@ -70,11 +70,14 @@
 \texttt{I}				\> insert at first char in line\\
 \texttt{o}				\> insert mode next line\\
 \texttt{O}				\> insert mode above line\\
+\texttt{a}				\> append after curser\\
+\texttt{A}				\> append after line\\
 \texttt{d + NOUN}		\> delete\\
 \texttt{c}				\> delete and insert mode \\
+\texttt{cc}				\> change complete line \\
 \texttt{x}				\> delete char\\
-\texttt{r}				\> change marked text\\
-\texttt{R}				\> change from cursor position\\
+\texttt{r}				\> replace single character\\
+\texttt{R}				\> replace from cursor position\\
 \texttt{\textbf{.}}		\> \textbf{repeat last change}\\
 \texttt{u}				\> undo changes\\
 \texttt{>}				\> indent\\
@@ -112,7 +115,6 @@
 \texttt{NUM gt}			\> got to tab NUM\\
 \end{tabbing}
 
-\vspace{1cm}
 \centering\textsc{version 0.1 - Martin Steinbach - meet-unix.org}
 
 \end{document}
